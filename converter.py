@@ -24,7 +24,7 @@ def to_xml(data: Iterable[Mapping[str, Any]],
            item_name: Optional[str] = 'item',
            file_name: Optional[str] = 'data') -> None:
     """
-    Создаёт из итерируемого объекта xml файл в папке "resulting files"
+    Создаёт из итерируемого объекта xml файл в папке "resulting files."
     """
     root = ElementTree.Element(root)
     for item in data:
@@ -55,7 +55,7 @@ def to_xml(data: Iterable[Mapping[str, Any]],
 def to_json(data: Iterable[Mapping[str, Any]],
             file_name: Optional[str] = "data") -> None:
     """
-    Создаёт из итерируемого объекта json файл в папке "resulting files"
+    Создаёт из итерируемого объекта json файл в папке "resulting files".
     """
     datetime_now = get_date_and_time()
     with open(f'resulting files/{file_name} {datetime_now}.json', 'w', encoding='utf-8') as file:
@@ -66,7 +66,7 @@ def to_excel(data: Iterable[Mapping[str, Any]], column_names: Iterable[str],
              file_name: Optional[str] = "table") -> None:
     """
     Создаёт из итерируемого объекта и имён столбцов
-    xlsx файл в папке "resulting files"
+    xlsx файл в папке "resulting files".
     """
     wb = Workbook()
     worksheet = wb.active
@@ -122,7 +122,7 @@ def to_csv(data: Iterable[Mapping[str, Any]], column_names: list[str],
            file_name: Optional[str] = 'data') -> None:
     """
     Создаёт из итерируемого объекта и имён столбцов
-    csv файл в папке "resulting files"
+    csv файл в папке "resulting files".
     """
     datetime_now = get_date_and_time()
     with open(f'resulting files/{file_name} {datetime_now}.csv', 'w', encoding='utf-8', newline='') as file:
